@@ -1,10 +1,6 @@
-# Autograding: JS test
+# JS test
 
-This example project is written in Node, and tested with Jest.
-
-### The assignment
-
-The tests are failing right now because we're not returning the correct string. Fixing this up will make the tests green.
+This is a simple test to see if you can write a function that returns a string.
 
 ### Setup command
 
@@ -13,7 +9,3 @@ The tests are failing right now because we're not returning the correct string. 
 ### Run command
 
 `npm test`
-
-### Notes
-
--
