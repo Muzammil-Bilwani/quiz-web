@@ -2,6 +2,8 @@
 // Example input: filterStrings(["hi", "hello", "hey", "howdy"])
 // Example output: ["hello", "howdy"]
 
-function filterStrings(array) {}
+function filterStrings(array) {
+  // your code here
+}
 
 module.exports = filterStrings

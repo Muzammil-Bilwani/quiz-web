@@ -2,6 +2,8 @@
 //    Example input: reverseString("hello")
 //    Example output: "olleh"
 
-function reverseString(value) {}
+function reverseString(value) {
+  // Your code here
+}
 
 module.exports = reverseString
