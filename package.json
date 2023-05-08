@@ -1,7 +1,7 @@
 {
+  "name": "js-practice",
   "private": true,
-  "version": "0.0.0",
-  "name": "example",
+  "version": "1.0.0",
   "devDependencies": {
     "@babel/core": "*",
     "@babel/preset-env": "*",
@@ -9,6 +9,6 @@
     "jest": "*"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll"
   }
 }
