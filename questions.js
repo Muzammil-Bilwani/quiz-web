@@ -30,7 +30,9 @@ function filterStrings(strings) {
 
 // Question 5
 function filterEven(numbers) {
-  // Your code here
+  return numbers.filter((e) => {
+    return e % 2 === 0;
+  });
 }
 
 // Question 6
