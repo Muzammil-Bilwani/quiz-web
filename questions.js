@@ -12,7 +12,7 @@ function findPair(numbers, target) {
 
 // Question 2
 function reverseString(str) {
-  // Your code here
+  return str.split("").reverse().join("");
 }
 
 // Question 3
