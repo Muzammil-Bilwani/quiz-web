@@ -1,9 +1,14 @@
-// 1. Write a function that takes a string as input and returns the reverse of the string.
-//    Example input: reverseString("hello")
-//    Example output: "olleh"
+// Question 1
+function findPair(numbers, target) {
+    // Your code here
+    for (const i of numbers) {
+      for (const j of numbers) {
+        if (i + j === target) {
+          return [i, j];
+        }
+      }
+    }
+    return null;
+  }
 
-function reverseString(value) {
-  // Your code here
-}
-
-module.exports = reverseString
+  

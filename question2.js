@@ -1,9 +1,13 @@
-// 2. Write a function that takes an array of strings as input and returns a new array that contains only the strings that have more than three characters.
-// Example input: filterStrings(["hi", "hello", "hey", "howdy"])
-// Example output: ["hello", "howdy"]
+// 1. Write a function that takes a string as input and returns the reverse of the string.
+//    Example input: reverseString("hello")
+//    Example output: "olleh"
 
-function filterStrings(array) {
-  // your code here
+// Question 2
+
+function reverseString(str) {
+  // Convert the string to an array of characters, reverse it, and then join the characters back into a string
+  return str.split("").reverse().join("");
 }
 
-module.exports = filterStrings
+
+module.exports = reverseString
