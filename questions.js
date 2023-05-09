@@ -74,7 +74,12 @@ function stringLengths(strings) {
 
 // Question 10
 function firstGreater(numbers) {
-  // Your code here
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] >= 10) {
+      return i;
+    }
+  }
+  return -1;
 }
 module.exports = {
   findPair,
