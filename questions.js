@@ -17,7 +17,8 @@ function reverseString(str) {
 
 // Question 3
 function sumLargest(numbers) {
-  // Your code here
+  numbers.sort((a, b) => b - a);
+  return numbers[0] + numbers[1];
 }
 
 // Question 4
