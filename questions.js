@@ -23,7 +23,9 @@ function sumLargest(numbers) {
 
 // Question 4
 function filterStrings(strings) {
-  // Your code here
+  return strings.filter((e) => {
+    return e.length > 3;
+  });
 }
 
 // Question 5
