@@ -52,7 +52,17 @@ function isPalindrome(str) {
 
 // Question 8
 function mostFrequent(str) {
-  // Your code here
+  let frequency = {};
+  let maxFrequency = 0;
+  let mostFrequentItem;
+  for (const item of str) {
+    frequency[item] = frequency[item] ? frequency[item] + 1 : 1;
+    if (frequency[item] > maxFrequency) {
+      maxFrequency = frequency[item];
+      mostFrequentItem = item;
+    }
+  }
+  return mostFrequentItem;
 }
 
 // Question 9
