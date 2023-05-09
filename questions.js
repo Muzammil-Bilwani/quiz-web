@@ -67,7 +67,9 @@ function mostFrequent(str) {
 
 // Question 9
 function stringLengths(strings) {
-  // Your code here
+  return strings.map((e) => {
+    return e.length;
+  });
 }
 
 // Question 10
