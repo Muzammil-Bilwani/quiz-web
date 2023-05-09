@@ -29,6 +29,7 @@ git push origin BRANCH_NAME
 ```
 
 6. Create a pull request to submit your work. Navigate to your forked repository in the browser and click the "New pull request" button. Fill out the pull request form and click "Create pull request".
+7. Share your Pull Request Link 
 
 ### Setup
 
