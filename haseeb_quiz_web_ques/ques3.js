@@ -5,11 +5,12 @@
 let arrSum = ([1, 2, 3, 4]);
 
 function sumLargest(arrSum) {
-    arrSum.sort();
-    const sum = arrSum[0] + arrSum[3];
+    let sum = 0;
+    for (let i = 2; i < arrSum.length; i++)
+        sum += arrSum[i];
 
     return sum;
 }
 
-let output = sumLargest([1,2,3,4]);
+let output = sumLargest([1, 2, 3, 4]);
 console.log(output);
