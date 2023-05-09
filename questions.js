@@ -37,7 +37,11 @@ function filterEven(numbers) {
 
 // Question 6
 function pluck(objects, key) {
-  // Your code here
+  const result = [];
+  for (let i = 0; i < objects.length; i++) {
+    result.push(objects[i][key]);
+  }
+  return result;
 }
 
 // Question 7
