@@ -5,7 +5,7 @@ function findPair(numbers, target) {
 
 // Question 2
 function reverseString(str) {
-  // Your code here
+  return str.split('').reverse().join('');
 }
 
 // Question 3
@@ -15,17 +15,25 @@ function sumLargest(numbers) {
 
 // Question 4
 function filterStrings(strings) {
-  // Your code here
+  return strings.filter(str => str.length > 3);
+ 
+  /* results = []
+   for(i=0; i< strings.length; i++){
+   if(strings[i].length > 3 ){
+     results.push(strings[i])
+   }
+   }
+   return results;*/
 }
 
 // Question 5
 function filterEven(numbers) {
-  // Your code here
+  return numbers.filter(ㅤ => ㅤ %2 === 0);
 }
 
 // Question 6
 function pluck(objects, key) {
-  // Your code here
+  return arrofobjs.map(object => object[key]) 
 }
 
 // Question 7
@@ -40,7 +48,12 @@ function mostFrequent(str) {
 
 // Question 9
 function stringLengths(strings) {
-  // Your code here
+  let lengthOfStr = []
+ 
+  for(i=0; i< strings.length; i++)
+  
+  lengthOfStr.push(strings[i].length)
+  return lengthOfStr 
 }
 
 // Question 10
