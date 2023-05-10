@@ -1,18 +1,20 @@
 // Question 1
 function findPair(numbers, target) {
-  // Your code here
-}
+
+  
+
 
 // Question 2
 function reverseString(str) {
-  // Your code here
+  return str.split("").reverse().join("");
+}
+reverseString("hello")
 }
 
 // Question 3
 function sumLargest(numbers) {
-  // Your code here
-}
 
+}
 // Question 4
 function filterStrings(strings) {
   // Your code here
