@@ -1,51 +1,74 @@
 // Question 1
 function findPair(numbers, target) {
-  // Your code here
+ // ONLY 1st & 8th Question remains, I'll soon understand them....
 }
 
 // Question 2
 function reverseString(str) {
-  // Your code here
+  return str.split('').reverse().join('');
 }
 
 // Question 3
 function sumLargest(numbers) {
-  // Your code here
+  let max1 = -Infinity;
+  let max2 = -Infinity;
+  // CHATGPT recommended to use -infinity instead of "0"
+  
+  for (let i = 0; i < numbers.length; i++) {
+    let num = numbers[i];
+    
+    
+    if (num > max1) {
+      max2 = max1;
+      max1 = num;
+    } else if (num > max2) {
+      max2 = num;
+    }
+  }
+  return max1 + max2;
 }
 
 // Question 4
 function filterStrings(strings) {
-  // Your code here
+   return strings.filter(str => str.length > 3);
 }
 
 // Question 5
 function filterEven(numbers) {
-  // Your code here
+  return numbers.filter(ㅤ => ㅤ %2 === 0);
 }
 
 // Question 6
 function pluck(objects, key) {
-  // Your code here
+  return objects.map(object => object[key]) 
 }
 
 // Question 7
 function isPalindrome(str) {
-  // Your code here
+  let reversedWord= str.split('').reverse().join('')
+  return reversedWord === str;
 }
 
 // Question 8
 function mostFrequent(str) {
-  // Your code here
+  // WILL LEARN SOON
 }
 
 // Question 9
 function stringLengths(strings) {
-  // Your code here
+   let lengthOfStr = []
+ 
+  for(i=0; i< strings.length; i++){
+  
+  lengthOfStr.push(strings[i].length)
+}
+  return lengthOfStr 
 }
 
 // Question 10
 function firstGreater(numbers) {
-  // Your code here
+   // I was really confused, but then i remembered counting in JS starts from "0"
+  return numbers.findIndex(num => num >= 10);
 }
 module.exports = {
   findPair,
