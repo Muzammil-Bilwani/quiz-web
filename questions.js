@@ -1,52 +1,145 @@
 // Question 1
-function findPair(numbers, target) {
-  // Your code here
+let numbers1 = [7, 5, 3, 8, 1, 4]
+let target = 10
+function findPair(numbers1, target) {
+  for (let i = 0; i < numbers1.length; i++) {
+    for (let j = 1; j < numbers1.length; j++) {
+      if (numbers1[i] + numbers1[j] == target) {
+        return [numbers1[i], numbers1[j]]
+      }
+    }
+  } return null
 }
+console.log(findPair(numbers1, target));
 
 // Question 2
+
+let str = "Assignment"
 function reverseString(str) {
-  // Your code here
+  let reversestrng1 = ""
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversestrng1 += str[i]
+  } return reversestrng1
+
 }
+console.log(reverseString(str))
+
 
 // Question 3
+const numbers = [5, 7, 3, 9, 8]
 function sumLargest(numbers) {
-  // Your code here
+  const sortedArray = numbers.sort(function (a, b) {
+    return a - b
+  })
+  const sum = sortedArray[numbers.length - 1] + sortedArray[numbers.length - 2]
+  return sum
 }
+console.log(sumLargest(numbers))
+
 
 // Question 4
+let strings = ["yes", "ashar", "yaqoob"]
 function filterStrings(strings) {
-  // Your code here
+  return strings.filter(function (element) {
+    if (element.length > 3)
+      return element
+
+  })
 }
+console.log(filterStrings(strings))
+
 
 // Question 5
-function filterEven(numbers) {
-  // Your code here
+let arr0 = [1, 2, 3, 4, 5, 6]
+function filterEven(arr0) {
+  let evennumbers = []
+  for (let i = 0; i < arr0.length; i++) {
+    if (arr0[i] % 2 === 0) {
+      evennumbers.push(arr0[i])
+    }
+  } return evennumbers
 }
+console.log(filterEven(arr0))
+
 
 // Question 6
+let objects = [{
+  name: "hasnain",
+  age: 29,
+  profession: "MERN stack developer"
+},
+{
+  name: "farhad",
+  age: 24,
+  profession: "chemical engineer"
+},
+{
+  name: "kashan",
+  age: 25,
+  profession: "doctor"
+}]
 function pluck(objects, key) {
-  // Your code here
+  return objects.map(function (element, index) {
+    return element[key]
+  })
 }
+console.log(pluck(objects, "age"))
+
 
 // Question 7
-function isPalindrome(str) {
-  // Your code here
+
+let str2 = "deified"
+function isPalindrome(str2) {
+  let reversestrng2 = ""
+  for (let i = str2.length - 1; i >= 0; i--) {
+    reversestrng2 += str2[i]
+  }
+  let result = reversestrng2 === str2 ? true : false
+  return result
 }
+console.log(isPalindrome(str2))
+
 
 // Question 8
-function mostFrequent(str) {
-  // Your code here
+let stg = "anonymous"
+function mostFrequent(stg) {
+  for (let i = 0; i < stg.length; i++) {
+    for (let j = 1; j < stg.length; j++) {
+      if (stg[i] == stg[j]) {
+        return stg[i]
+      }
+    }
+  } return null
 }
+console.log(mostFrequent(stg))
+
 
 // Question 9
-function stringLengths(strings) {
-  // Your code here
+
+let arrstring007 = ['lakaku', "ronaldo", "benzema"]
+function stringLengths(arrstring007) {
+  let lenofallstrg = []
+  for (let i = 0; i < arrstring007.length; i++) {
+    lenofallstrg.push(arrstring007[i].length)
+  }
+  return lenofallstrg
 }
+console.log(stringLengths(arrstring007))
+
 
 // Question 10
-function firstGreater(numbers) {
-  // Your code here
+let ar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+let number = 10
+function firstGreater(ar, number) {
+  for (let i = 0; i < ar.length; i++) {
+    if (ar[i] >= number) {
+      return i;
+    }
+  }
+  return "notfound"
 }
+console.log(firstGreater(ar, number));
+
 module.exports = {
   findPair,
   reverseString,
