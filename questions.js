@@ -116,7 +116,7 @@ console.log(mostFrequent(stg))
 
 // Question 9
 
-let arrstring007 = ['lakaku', "ronaldo", "benzema"]
+let arrstring007 = ['messi', "ronaldo", "benzema"]
 function stringLengths(arrstring007) {
   let lenofallstrg = []
   for (let i = 0; i < arrstring007.length; i++) {
