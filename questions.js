@@ -1,52 +1,121 @@
 // Question 1
+
 function findPair(numbers, target) {
-  // Your code here
+  const seenNumbers = {};
+  for (let i = 0; i < numbers.length; i++) {
+ const difference = target - numbers[i];
+if (seenNumbers[difference]) {
+      return [difference, numbers[i]];
+    }seenNumbers[numbers[i]] = true;
+  }return null;
 }
+console.log(findPair([1, 2, 3, 4], 5));
+  
+  // Question 2
 
-// Question 2
-function reverseString(str) {
-  // Your code here
-}
+  let str = "hello";
+  function reverseString(str) {
+      return str.split("").reverse().join("");
+    }
+    console.log(reverseString(str));
+    
+  // Question 3
 
-// Question 3
-function sumLargest(numbers) {
-  // Your code here
-}
+  function sumLargest(arr) {
+    const sortedArr = arr.sort((a, b) => b - a);
+    return sortedArr[0] + sortedArr[1];
+  }
+  console.log(sumLargest([1, 2, 3, 4]));
+  
+  // Question 4
 
-// Question 4
-function filterStrings(strings) {
-  // Your code here
-}
+  let name = ["hi", "hello", "hey", "howdy"];
+  function filterStrings(name) {
+    let filteredArr = [];
+    for (let i = 0; i < name.length; i++) {
+      if (name[i].length > 3) {
+        filteredArr.push(name[i]);
+      }
+    }return filteredArr;
+  }
+  console.log(filterStrings(name));
+    
+  // Question 5
 
-// Question 5
-function filterEven(numbers) {
-  // Your code here
-}
+  let number = [1, 2, 3, 4, 5, 6];
+  function filterEven(number) {
+    let filteredArr = [];
+  
+    for (let i = 0; i < number.length; i++) {
+      if (number[i] % 2 === 0) {
+        filteredArr.push(number[i]);
+      }
+    }return filteredArr;
+  }
+  console.log(filterEven(number));
+  
+  // Question 6
 
-// Question 6
-function pluck(objects, key) {
-  // Your code here
-}
+  function pluck(arrayOfObjects, keyName) {
+    const pluckedValues = arrayOfObjects.map(function(obj) {
+      return obj[keyName];
+    });  
+  console.log(pluckedValues);
+  }
+  pluck([{name: "John", age: 30}, {name: "Jane", age: 25}], "name");
+  
+  // Question 7
 
-// Question 7
-function isPalindrome(str) {
-  // Your code here
-}
-
-// Question 8
-function mostFrequent(str) {
-  // Your code here
-}
-
+  function isPalindrome(str) {
+    str = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+  for (let i = 0; i < str.length / 2; i++) {
+      if (str[i] !== str[str.length - 1 - i]) {
+       return false;
+      }
+    }return true;
+  }
+  console.log(isPalindrome("racecar"));
+  
+  // Question 8
+  
+  function mostFrequent(str) {
+    const charFrequencies = {};
+    for (let i = 0; i < str.length; i++) {
+      if (charFrequencies[str[i]]) {
+        charFrequencies[str[i]]++;
+      }else {
+        charFrequencies[str[i]] = 1;}}
+    let mostFrequentChar = null;
+    let highestFrequency = 0;
+    for (const char in charFrequencies) {
+      if (charFrequencies[char] > highestFrequency) {
+        mostFrequentChar = char;
+        highestFrequency = charFrequencies[char];}}
+    console.log(mostFrequentChar);
+  }
+  mostFrequent("hello world");
+  
 // Question 9
-function stringLengths(strings) {
-  // Your code here
-}
 
-// Question 10
-function firstGreater(numbers) {
-  // Your code here
-}
+function stringLengths(arr) {
+  const lengthsArr = [];
+    for (let i = 0; i < arr.length; i++) {
+      lengthsArr.push(arr[i].length);
+    }return lengthsArr;
+  }
+  console.log(stringLengths(["hi","hello","hey","howdy"]));
+  
+  // Question 10
+
+  function firstGreater(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] >= 10) {
+        return i;
+      }
+    }
+  }
+  console.log(firstGreater([1, 5, 15, 20]));
+
 module.exports = {
   findPair,
   reverseString,
@@ -57,5 +126,5 @@ module.exports = {
   isPalindrome,
   mostFrequent,
   stringLengths,
-  firstGreater
+  firstGreater    
 }

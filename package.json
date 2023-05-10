@@ -10,5 +10,8 @@
   },
   "scripts": {
     "test": "jest --watchAll"
+  },
+  "dependencies": {
+    "js-practice": "github:Muazkhan526/quiz-web"
   }
 }
