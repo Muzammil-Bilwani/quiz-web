@@ -1,16 +1,17 @@
 // Question 1
-let numbers1 = [7, 5, 3, 8, 1, 4]
-let target = 10
-function findPair(numbers1, target) {
-  for (let i = 0; i < numbers1.length; i++) {
-    for (let j = 1; j < numbers1.length; j++) {
-      if (numbers1[i] + numbers1[j] == target) {
-        return [numbers1[i], numbers1[j]]
+
+let array = [1, 2, 3, 4]
+let target = 7
+function findPair(array, target) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return [array[i], array[j]]
       }
     }
   } return null
 }
-console.log(findPair(numbers1, target));
+console.log(findPair(array, target));
 
 // Question 2
 
@@ -79,7 +80,7 @@ let objects = [{
   profession: "doctor"
 }]
 function pluck(objects, key) {
-  return objects.map(function (element, index) {
+  return objects.map(function (element) {
     return element[key]
   })
 }
@@ -99,7 +100,7 @@ function isPalindrome(str2) {
 }
 console.log(isPalindrome(str2))
 
-
+// 8. Write a function that takes a string as input and returns the most frequent character in the string. If there are multiple characters that appear with the same frequency, return the one that appears first.
 // Question 8
 let stg = "anonymous"
 function mostFrequent(stg) {
@@ -128,17 +129,16 @@ console.log(stringLengths(arrstring007))
 
 
 // Question 10
-let ar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-let number = 10
-function firstGreater(ar, number) {
+let ar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+function firstGreater(ar) {
   for (let i = 0; i < ar.length; i++) {
-    if (ar[i] >= number) {
+    if (ar[i] >= 10) {
       return i;
     }
-  }
-  return "notfound"
+  } return -1;
 }
-console.log(firstGreater(ar, number));
+let result = (firstGreater(ar));
+console.log(result)
 
 module.exports = {
   findPair,
