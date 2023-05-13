@@ -77,21 +77,21 @@ const evenNumbers = filterEven(arr);
 console.log(evenNumbers);
 
 // Question 6
-function plucks(objArray, key) {
+function plucks(object, key) {
   let arrayofobjects = [];
 
-  for (let i = 0; i < objArray.length; ++i) {
-    arrayofobjects.push(objArray[i][key]);
+  for (let i = 0; i < object.length; ++i) {
+    arrayofobjects.push(object[i][key]);
   }
   return arrayofobjects;
 }
 
-let objArray = [
+let object = [
   { name: "John", age: 30 },
   { name: "Jane", age: 25 },
 ];
 
-let result = plucks(objArray, "name");
+let result = plucks(object, "name");
 console.log(result);
 
 // Question 7
