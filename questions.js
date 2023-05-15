@@ -1,6 +1,13 @@
 // Question 1
 function findPair(numbers, target) {
- // ONLY 1st & 8th Question remains, I'll soon understand them....
+  for(let i = 0; i < numbers.length; i++){
+   for(let j = i + 1 ; j < numbers.length; j++){
+     if(numbers[i] + numbers[j] === target){
+       return [numbers[i], numbers[j]]
+     }
+   }
+ }
+ return null; 
 }
 
 // Question 2
@@ -51,7 +58,7 @@ function isPalindrome(str) {
 
 // Question 8
 function mostFrequent(str) {
-  // WILL LEARN SOON
+ // Exept of that everything is done, I need help with this one.
 }
 
 // Question 9
