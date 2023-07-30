@@ -1,5 +1,5 @@
 const request = require("supertest")
-const app = require("./api") // Replace with the path to your Express app file
+const app = require("./app") // Replace with the path to your Express app file
 
 let students = []
 

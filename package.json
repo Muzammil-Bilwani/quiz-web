@@ -6,6 +6,7 @@
     "@babel/core": "*",
     "@babel/preset-env": "*",
     "babel-jest": "*",
+    "body-parser": "^1.20.2",
     "jest": "*"
   },
   "scripts": {
