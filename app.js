@@ -83,9 +83,9 @@ app.delete("/api/students/:id", (req, res) => {
   let i = students.findIndex(e => e.id == id)
 students.splice(i, 1)
 res.json({
-      success : true,
-      message : "data deleted successfuly"
-    })
+  success : true,
+  message : "data deleted successfuly"
+})
 })
 
 // GET one student
