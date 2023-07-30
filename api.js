@@ -35,7 +35,7 @@ app.post("/api/students", (req, res) => {
     id : (students.length),
     name : name
   })
-  res.json(
+  res.status(201).json(
     newstudents
 )
 })
@@ -43,18 +43,17 @@ app.post("/api/students", (req, res) => {
 // PUT student
 app.put("/api/students/:id", (req, res) => {
   // write your code here
-  let id = req.params.id
+  let id = parseInt(req.params.id)
   let name = req.body.name
-  let i = students.findIndex(e => e.id == id)
-    students[i] = {
-      ...students[i],
+  // let i = students.findIndex(e => e.id == id)
+    students[id] = {
+      ...students[id],
       id : id,
       name : name 
     }
-    res.json({
-      
-      name : name 
-    })
+    res.json(
+      students[id]
+)
 })
 
 // DELETE student
@@ -72,7 +71,7 @@ res.json({
 app.get("/api/students/:id", (req, res) => {
   // write your code here
   let id = req.params.id
-  let i = students.findIndex(e => e.id == id)
+  // let i = students.findIndex(e => e.id == id)
   res.json(
     students[id]
 )
