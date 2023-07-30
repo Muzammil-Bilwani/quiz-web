@@ -36,7 +36,7 @@ app.put("/api/students/:id", (req, res) => {
 
 // DELETE student
 app.delete("/api/students/:id", (req, res) => {
-  students = students.find(s => s.id !== 1)
+  students = students.splice(s => s.id === 1)
   res.json(students)
 })
 
