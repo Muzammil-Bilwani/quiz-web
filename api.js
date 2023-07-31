@@ -31,7 +31,17 @@ app.post("/api/students", (req, res) => {
 
 // PUT student
 app.put("/api/students/:id", (req, res) => {
-  // Write your code here
+  const id = parseInt(req.params.id);
+  const { name } = req.body;
+
+  const student = students.find((student) => student.id === id);
+
+  if (!student) {
+    return res.status(404).json({ message: "Student not found" });
+  }
+
+  student.name = name;
+  return res.json(student);
 });
 
 // DELETE student
