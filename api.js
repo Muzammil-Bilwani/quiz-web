@@ -48,7 +48,7 @@ app.put("/api/students/:id", (req, res) => {
   }
 
   studentToUpdate.name = name;
-  res.json(studentToUpdate);
+  res.status(200).json(studentToUpdate);
 });
 // DELETE student
 app.delete("/api/students/:id", (req, res) => {
