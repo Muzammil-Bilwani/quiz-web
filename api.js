@@ -19,7 +19,14 @@ app.get("/api/students", (req, res) => {
 
 // POST student
 app.post("/api/students", (req, res) => {
-  // Write your code here
+  const { name } = req.body;
+  if (!name || !name.trim()) {
+    return res.status(400).json({ message: "invalid input" });
+  }
+  const id = students.length;
+  const newStudent = { id, name };
+  students.push(newStudent);
+  return res.status(201).json(newStudent);
 });
 
 // PUT student
