@@ -44,7 +44,7 @@ app.put("/api/students/:id", (req, res) => {
   const studentToUpdate = students.find((student) => student.id === idToUpdate);
 
   if (!studentToUpdate) {
-    return res.status(200).json({ message: "Student not found" });
+    return res.status(404).json({ message: "Student not found" });
   }
 
   studentToUpdate.name = name;
