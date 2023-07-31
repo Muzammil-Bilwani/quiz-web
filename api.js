@@ -46,7 +46,16 @@ app.put("/api/students/:id", (req, res) => {
 
 // DELETE student
 app.delete("/api/students/:id", (req, res) => {
-  // Write your code here
+  const id = parseInt(req.params.id);
+
+  const studentInd = students.findIndex((student) => student.id === id);
+
+  if (studentInd === -1) {
+    return res.status(404).json({ message: "Student not found" });
+  }
+
+  students.splice(studentInd, 1);
+  return res.json({ message: "Student deleted successfully." });
 });
 
 // GET one student
