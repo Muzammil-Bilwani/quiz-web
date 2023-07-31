@@ -60,7 +60,14 @@ app.delete("/api/students/:id", (req, res) => {
 
 // GET one student
 app.get("/api/students/:id", (req, res) => {
-  // Write your code here
+  const id = parseInt(req.params.id);
+  const student = students.find((student) => student.id === id);
+
+  if (!student) {
+    return res.status(404).json({ message: "Student not found" });
+  }
+
+  return res.json(student);
 });
 
 // app.listen(3000, () => {
